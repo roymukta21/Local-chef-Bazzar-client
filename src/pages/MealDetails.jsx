@@ -208,13 +208,13 @@ console.log(paymentInfo)
               <TabList className="flex gap-3">
                 <Tab
                   selectedClassName="-select-tab"
-                  className="bg-orange-200 mt-3 text-orange-600 py-2.5 px-3.5  hover:bg-orange-600 hover:text-white transition-colors cursor-pointer"
+                  className="bg-orange-200 mt-3 text-primary py-2.5 px-3.5  hover:bg-orange-600 hover:text-white transition-colors cursor-pointer"
                 >
                   Customer Reviews
                 </Tab>
                 <Tab
                   selectedClassName="-select-tab"
-                  className="bg-orange-200 mt-3 text-orange-600 py-2.5 px-3.5  hover:bg-orange-600 hover:text-white transition-colors cursor-pointer"
+                  className="bg-orange-200 mt-3 text-primary py-2.5 px-3.5  hover:bg-orange-600 hover:text-white transition-colors cursor-pointer"
                 >
                   Give Review
                 </Tab>

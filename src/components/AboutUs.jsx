@@ -7,10 +7,10 @@ const AboutUs = () => {
 
       {/* Heading */}
       <div className="text-center mb-10">
-        <h1 className="text-4xl font-bold text-gray-800 dark:text-gray-100">
+        <h1 className="text-4xl font-bold text-secondary dark:text-gray-100">
           About Local Chef Bazaar
         </h1>
-        <p className="mt-4 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+        <p className="mt-4 text-secondary  dark:text-gray-300 max-w-2xl mx-auto">
           Discover authentic homemade meals prepared by talented local chefs.
           Local Chef Bazaar connects food lovers with passionate home cooks —
           delivering fresh, flavorful meals right to your doorstep.
@@ -26,7 +26,7 @@ const AboutUs = () => {
         />
 
         <div>
-          <h2 className="text-3xl font-semibold mb-4 text-orange-600">
+          <h2 className="text-3xl font-semibold mb-4 text-primary">
             Our Mission
           </h2>
           <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
@@ -40,7 +40,7 @@ const AboutUs = () => {
 
       {/* What We Offer */}
       <section className="mb-20">
-        <h2 className="text-3xl font-semibold text-center text-orange-600 mb-8">
+        <h2 className="text-3xl font-semibold text-center text-primary mb-8">
           What We Offer
         </h2>
 
@@ -102,7 +102,7 @@ const AboutUs = () => {
       {/* Why Choose Us */}
       <section className="grid lg:grid-cols-2 gap-10 items-center">
         <div>
-          <h2 className="text-3xl font-semibold mb-4 text-orange-600">
+          <h2 className="text-3xl font-semibold mb-4 text-primary">
             Why Choose Local Chef Bazaar?
           </h2>
           <ul className="space-y-3 text-gray-700 dark:text-gray-300">

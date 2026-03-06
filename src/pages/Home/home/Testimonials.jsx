@@ -10,7 +10,7 @@ const Testimonials = ({ reviews }) => {
         <Reveal>
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-extrabold ">
-              <span className="text-orange-600"> Loved by Everywhere</span>
+              <span className="text-primary"> Loved by Everywhere</span>
             </h2>
           </div>
 
@@ -27,14 +27,14 @@ const Testimonials = ({ reviews }) => {
                     {[...Array(review.rating)].map((_, i) => (
                       <Star
                         key={i}
-                        className="w-5 h-5 fill-orange-500 text-orange-500"
+                        className="w-5 h-5 fill-primary text-primary"
                       />
                     ))}
                   </div>
 
                   <p className="italic mb-6">"{review.text}"</p>
 
-                  <div className="flex items-center gap-4 dark:text-orange-600">
+                  <div className="flex items-center gap-4 dark:text-primary">
                     <img
                       src={review.UserPhoto}
                       alt={review.userName}

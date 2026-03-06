@@ -74,7 +74,7 @@ const OrderRequests = () => {
                   
                   {/* Order Details */}
                   <div className="flex-1">
-                    <h3 className="font-semibold text-2xl text-orange-700">{mealName}</h3>
+                    <h3 className="font-semibold text-2xl text-primary">{mealName}</h3>
                     <p className="text-sm mt-1 font-medium">{quantity} portions • ৳{price}</p>
 
                     <p className="text-sm mt-1">

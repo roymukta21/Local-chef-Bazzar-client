@@ -69,14 +69,14 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="bg-white shadow-sm sticky top-0 z-50">
+    <nav className="bg-white shadow-sm sticky top-0 z-50 dark(bg-gray-900)">
       <div className="w-11/12 mx-auto">
         <div className="flex items-center justify-between h-16 md:h-20">
 
           {/* LOGO */}
           <Link to="/" className="flex items-center gap-2">
             <img className="w-8" src="/localChefBazaar.png" alt="logo" />
-            <span className="text-lg font-bold text-orange-500">
+            <span className="text-lg font-bold text-primary">
               LocalChefBazaar
             </span>
           </Link>
@@ -91,8 +91,8 @@ export default function Navbar() {
                   to={item.path}
                   className={`flex items-center gap-1 font-medium transition-colors ${
                     isActive(item.path)
-                      ? "text-orange-500"
-                      : "text-gray-700 hover:text-orange-500"
+                      ? "text-primary"
+                      : "text-secondary hover:text-primary"
                   }`}
                 >
                   {Icon && <Icon className="w-4 h-4" />}
@@ -138,17 +138,17 @@ export default function Navbar() {
                 </button>
 
                 {userDropdownOpen && (
-                  <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border">
+                  <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 dark(bg-gray-800 border-gray-700)">
                     <Link
                       to="/dashboard"
-                      className="flex items-center px-4 py-2 hover:bg-orange-50 hover:text-orange-500"
+                      className="flex items-center px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-primary dark(text-gray-200 hover:bg-gray-700 hover:text-orange-400)"
                     >
                       <UserCircle className="w-5 h-5 mr-2" />
                       Profile
                     </Link>
                     <button
                       onClick={handleLogout}
-                      className="flex items-center w-full px-4 py-2 text-orange-500 hover:bg-orange-50"
+                      className="flex items-center w-full px-4 py-2 text-red-500 hover:bg-orange-50 dark(text-red-400 hover:bg-gray-700)"
                     >
                       <LogOut className="w-5 h-5 mr-2" />
                       Logout
@@ -160,13 +160,13 @@ export default function Navbar() {
               <div className=" sm:flex gap-2">
                 <Link
                   to="/login"
-                  className="border border-orange-500 text-orange-500 px-4 py-2 rounded"
+                  className="border border-primary text-primary px-4 py-2 rounded"
                 >
                   Login
                 </Link>
                 <Link
                   to="/register"
-                  className="bg-orange-500 text-white px-4 py-2 rounded"
+                  className="bg-primary text-white px-4 py-2 rounded"
                 >
                   Register
                 </Link>
@@ -194,8 +194,8 @@ export default function Navbar() {
                   onClick={() => setMobileMenuOpen(false)}
                   className={`px-4 py-2 rounded ${
                     isActive(item.path)
-                      ? "bg-orange-50 text-orange-500"
-                      : "hover:bg-orange-50"
+                      ? "bg-orange-50 text-primary"
+                      : "hover:bg-primary"
                   }`}
                 >
                   {item.name}

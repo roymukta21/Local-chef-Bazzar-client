@@ -67,45 +67,45 @@ const Home = () => {
 
   const features = [
     {
-      icon: <Clock10 className="w-10 h-10 text-orange-600" />,
+      icon: <Clock10 className="w-10 h-10 text-primary" />,
       title: (
-        <span className="text-black dark:text-white">
+        <span className="text-primary">
           Save Time in the Kitchen
         </span>
       ),
       desc: "Quick & easy recipes — ready in 30 minutes or less.",
     },
     {
-      icon: <HeartIcon className="w-10 h-10 text-orange-600" />,
+      icon: <HeartIcon className="w-10 h-10 text-primary" />,
       title: (
-        <span className="text-black dark:text-white">Save Your Favorites</span>
+        <span className="text-primary">Save Your Favorites</span>
       ),
       desc: "Build your personal cookbook with one click.",
     },
     {
-      icon: <ChefHat className="w-10 h-10 text-orange-600" />,
+      icon: <ChefHat className="w-10 h-10 text-primary" />,
       title: (
-        <span className="text-black dark:text-white">Add Your Own Recipes</span>
+        <span className="text-primary">Add Your Own Recipes</span>
       ),
       desc: "Share your signature dishes with the community.",
     },
     {
-      icon: <ShareIcon className="w-10 h-10 text-orange-600" />,
+      icon: <ShareIcon className="w-10 h-10 text-primary" />,
       title: (
-        <span className="text-black dark:text-white">Share with Friends</span>
+        <span className="text-primary">Share with Friends</span>
       ),
       desc: "Send recipes instantly to friends & family.",
     },
     {
-      icon: <UsersIcon className="w-10 h-10 text-orange-600" />,
+      icon: <UsersIcon className="w-10 h-10 text-primary" />,
       title: (
-        <span className="text-black dark:text-white">Foodie Community</span>
+        <span className="text-primary">Foodie Community</span>
       ),
       desc: "Discover meals from real home cooks.",
     },
     {
-      icon: <Sparkles className="w-10 h-10 text-orange-600" />,
-      title: <span className="text-black dark:text-white">Always Fresh</span>,
+      icon: <Sparkles className="w-10 h-10 text-primary" />,
+      title: <span className="text-primary">Always Fresh</span>,
       desc: "New recipes added daily.",
     },
   ];
@@ -133,7 +133,7 @@ const Home = () => {
                 variants={itemVariants}
                 className="text-3xl md:text-6xl font-black leading-tight mb-4"
               >
-                Fresh <span className="text-orange-500">Homemade</span>
+                Fresh <span className="text-primary">Homemade</span>
                 Meals
               </motion.h1>
 
@@ -144,7 +144,7 @@ const Home = () => {
               <motion.div variants={itemVariants}>
                 <Link
                   to="/meals"
-                  className="inline-block px-6 py-3 bg-orange-600 hover:bg-orange-700 rounded-lg font-semibold "
+                  className="inline-block px-6 py-3 bg-primary hover:bg-orange-700 rounded-lg font-semibold "
                 >
                   Explore Meals
                 </Link>
@@ -161,15 +161,15 @@ const Home = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-extrabold dark:text-gray-100">
               Why You'll Love
-              <span className="text-orange-600"> Cooking With Us</span>
+              <span className="text-primary"> Cooking With Us</span>
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {features.map((f, i) => (
               <div
                 key={i}
-                className="bg-orange-50 p-8 rounded-3xl border hover:shadow-xl transition"
+                className="bg-orange-50 p-8 rounded-3xl border border-primary hover:shadow-xl transition dark:bg-gray-900"
               >
                 <div className="mb-6">{f.icon}</div>
                 <h3 className="text-2xl font-bold mb-2">{f.title}</h3>
@@ -185,7 +185,7 @@ const Home = () => {
         <Reveal>
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-extrabold ">
-              <span className="text-orange-600"> Loved by Everywhere</span>
+              <span className="text-primary"> Loved by Everywhere</span>
             </h2>
           </div>
 
@@ -202,14 +202,14 @@ const Home = () => {
                     {[...Array(review.rating)].map((_, i) => (
                       <Star
                         key={i}
-                        className="w-5 h-5 fill-orange-500 text-orange-500"
+                        className="w-5 h-5 fill-primary text-primary"
                       />
                     ))}
                   </div>
 
                   <p className="italic mb-6">"{review.text}"</p>
 
-                  <div className="flex items-center gap-4 dark:text-orange-600">
+                  <div className="flex items-center gap-4 dark:text-primary">
                     <img
                       src={review.UserPhoto}
                       alt={review.userName}

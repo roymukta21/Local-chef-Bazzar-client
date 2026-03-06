@@ -5,30 +5,30 @@
 
 /* Light theme colors */
 :root {
-  --color-primary: #0d0dec;
-  --color-secondary: #1fafec;
+  --color-primary: #f97316;
+  --color-secondary: #69625e;
 }
 
 /* Dark theme colors */
-[data-theme="dark"] {
+/* [data-theme="dark"] {
   --color-secondary: #38BDF8;
-}
+} */
 
 
-@custom-variant dark (&:where([data-theme=dark], .[data-theme=dark ]*));
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 
 
 /* Button */
 
 .primary-btn {
-  @apply bg-[#ff6900] hover:bg-orange-600 mt-3 text-white py-2.5 px-3.5 rounded-sm transition-colors duration-200 cursor-pointer
+  @apply bg-[#f97316] hover:bg-orange-600 mt-3 text-white py-2.5 px-3.5 rounded-sm transition-colors duration-200 cursor-pointer
          dark:bg-orange-500 dark:hover:bg-orange-600;
 }
 
 .delete-btn {
-  @apply bg-black hover:bg-gray-800 mt-3 text-white py-2.5 px-3.5 rounded-sm transition-colors duration-200 cursor-pointer
-         dark:bg-red-600 dark:hover:bg-red-700;
+  @apply bg-[#f97316] hover:bg-red-800 mt-3 text-white py-2.5 px-3.5 rounded-sm transition-colors duration-200 cursor-pointer
+        
 }
 
 .success-btn {

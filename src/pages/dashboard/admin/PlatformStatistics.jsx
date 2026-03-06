@@ -62,7 +62,7 @@ const PlatformStatistics = () => {
         {/* total Payment */}
         <div className="bg-white rounded-lg shadow p-6">
           <div className="flex items-center justify-between mb-4">
-            <BarChart3 className="text-orange-600" size={30} />
+            <BarChart3 className="text-primary" size={30} />
           </div>
           <h3 className="text-2xl font-bold text-gray-700">{`$${totalPayment}`}</h3>
           <p className="text-gray-600">Total Payment</p>

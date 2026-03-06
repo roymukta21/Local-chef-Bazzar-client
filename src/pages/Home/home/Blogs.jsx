@@ -36,7 +36,7 @@ const Blogs = () => {
         <div className="text-center mb-4">
           <h2 className="text-4xl md:text-5xl font-extrabold text-gray-800 mb-4">
             Local Chef Bazzar
-            <span className="text-orange-600"> Blog & Stories</span>
+            <span className="text-primary"> Blog & Stories</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Discover cooking inspiration, tips, and stories from our talented
@@ -59,7 +59,7 @@ const Blogs = () => {
                 />
               </div>
 
-              <p className="text-xs text-orange-600 font-bold mt-4 uppercase tracking-widest">
+              <p className="text-xs text-primary font-bold mt-4 uppercase tracking-widest">
                 {post.category}
               </p>
 

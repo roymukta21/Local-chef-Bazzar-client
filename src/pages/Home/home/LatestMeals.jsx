@@ -22,12 +22,12 @@ const LatestMeals = () => {
   }
 
   return (
-    <div className="bg-orange-50 p-8 rounded-3xl border hover:shadow-xl transition">
+    <div className="bg-orange-50 p-8 rounded-3xl hover:shadow-xl transition dark:bg-gray-900">
       {/* Heading & Subheading */}
       <div className="text-center mb-16">
-        <h2 className="text-4xl md:text-6xl font-extrabold text-gray-800 mb-4">
+        <h2 className="text-4xl md:text-6xl font-extrabold text-secondary mb-4">
           Fresh From Your
-          <span className="text-orange-600"> Local Chefs</span>
+          <span className="text-primary"> Local Chefs</span>
         </h2>
         <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
           Discover the newest dishes prepared by talented home chefs from your area.
@@ -37,7 +37,7 @@ const LatestMeals = () => {
 
       <Reveal>
         {/* Meals Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-16">
           {meals.map((meal) => (
             <MealCard key={meal._id} meal={meal} />
           ))}

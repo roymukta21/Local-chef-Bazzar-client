@@ -38,7 +38,7 @@ export default function Signup() {
       userPassword.length < 6
     ) {
       setError(
-        "Password must contain uppercase, lowercase, number and be at least 6 characters long."
+        "Password must contain uppercase, lowercase, number and be at least 6 characters long.",
       );
       return;
     }
@@ -47,7 +47,7 @@ export default function Signup() {
       const userCredential = await createUserWithEmailAndPassword(
         auth,
         email,
-        userPassword
+        userPassword,
       );
 
       // Only update profile if name or photoURL exist
@@ -66,7 +66,10 @@ export default function Signup() {
           status: "active",
         };
         //https://local-chef-bazaar-server-wine.vercel.app
-        await axios.post("https://local-chef-bazaar-server-wine.vercel.app/api/users", userInfo);
+        await axios.post(
+          "https://local-chef-bazaar-server-wine.vercel.app/api/users",
+          userInfo,
+        );
       }
 
       toast.success("Signup successful! Welcome aboard 💫");
@@ -79,114 +82,150 @@ export default function Signup() {
   };
 
   const handleGoogleSignup = async () => {
-  try {
-    const result = await signInWithPopup(auth, googleProvider);
+    try {
+      const result = await signInWithPopup(auth, googleProvider);
 
-    // 🔥 ADD THIS: Save Google user to MongoDB
-    const userInfo = {
-      name: result.user.displayName,
-      email: result.user.email,
-      photoURL: result.user.photoURL,
-      role: "user",
-      status: "active",
-    };
+      // 🔥 ADD THIS: Save Google user to MongoDB
+      const userInfo = {
+        name: result.user.displayName,
+        email: result.user.email,
+        photoURL: result.user.photoURL,
+        role: "user",
+        status: "active",
+      };
 
-    await axios.post("https://local-chef-bazaar-server-wine.vercel.app/api/users", userInfo);
+      await axios.post(
+        "https://local-chef-bazaar-server-wine.vercel.app/api/users",
+        userInfo,
+      );
 
-    toast.success("Signed in with Google!");
-    navigate("/");
-  } catch (err) {
-    setError(err.message);
-  }
-};
-
+      toast.success("Signed in with Google!");
+      navigate("/");
+    } catch (err) {
+      setError(err.message);
+    }
+  };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gradient-to-r from-blue-50 to-blue-100">
-      <div className="bg-white p-8 rounded-2xl shadow-lg w-full max-w-md">
-        <h2 className="text-2xl font-bold text-center mb-6 text-primary">
-          Create an Account
-        </h2>
+    <div className="flex justify-center items-center min-h-screen  px-4 ">
+  <div className="bg-white w-full max-w-md p-8 rounded-2xl shadow-xl border border-primary">
 
-        <form onSubmit={handleSignup} className="space-y-4">
-          <input
-            type="text"
-            name="name"
-            placeholder="Full Name"
-            required
-            className="w-full border rounded px-3 py-2 
-             text-gray-900 placeholder-gray-500 
-             dark:bg-gray-800 dark:text-gray-100 
-             dark:placeholder-gray-400 dark:border-gray-600
-             focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-          />
-          <input
-            type="text"
-            name="photo"
-            placeholder="Photo URL"
-            required
-            className="w-full border rounded px-3 py-2 
-             text-gray-900 placeholder-gray-500 
-             dark:bg-gray-800 dark:text-gray-100 
-             dark:placeholder-gray-400 dark:border-gray-600
-             focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="Email"
-            required
-            className="w-full border rounded px-3 py-2 
-             text-gray-900 placeholder-gray-500 
-             dark:bg-gray-800 dark:text-gray-100 
-             dark:placeholder-gray-400 dark:border-gray-600
-             focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-          />
-          <div className="relative">
-            <input
-              required
-              type={showPass ? "text" : "password"}
-              name="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              placeholder="Password"
-              className="w-full border rounded px-3 py-2 
-             text-gray-900 placeholder-gray-500 
-             dark:bg-gray-800 dark:text-gray-100 
-             dark:placeholder-gray-400 dark:border-gray-600
-             focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-            />
-            <button
-              type="button"
-              onClick={() => setShowPass((v) => !v)}
-              className="absolute right-2 top-2 text-sm text-primary"
-            >
-              {showPass ? "Hide" : "Show"}
-            </button>
-          </div>
-          {error && <p className="text-red-400 text-sm">{error}</p>}
-          <button
-            type="submit"
-            className="btn w-full bg-accent-content hover:bg-green-300 text-white"
-          >
-            Register
-          </button>
-        </form>
+    <h2 className="text-3xl font-bold text-center mb-2 text-secondary">
+      Create an Account
+    </h2>
+    <p className="text-center text-sm text-gray-500 mb-6">
+      Join us and start your journey today
+    </p>
 
+    <form onSubmit={handleSignup} className="space-y-4">
+
+      {/* Full Name */}
+      <input
+        type="text"
+        name="name"
+        placeholder="Full Name"
+        required
+        className="w-full border border-gray-300 rounded-lg px-4 py-2.5
+        text-gray-800 placeholder-gray-400
+        focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary
+        transition duration-200"
+      />
+
+      {/* Photo URL */}
+      <input
+        type="text"
+        name="photo"
+        placeholder="Photo URL"
+        required
+        className="w-full border border-gray-300 rounded-lg px-4 py-2.5
+        text-gray-800 placeholder-gray-400
+        focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary
+        transition duration-200"
+      />
+
+      {/* Email */}
+      <input
+        type="email"
+        name="email"
+        placeholder="Email"
+        required
+        className="w-full border border-gray-300 rounded-lg px-4 py-2.5
+        text-gray-800 placeholder-gray-400
+        focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary
+        transition duration-200"
+      />
+
+      {/* Password */}
+      <div className="relative">
+        <input
+          required
+          type={showPass ? "text" : "password"}
+          name="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          placeholder="Password"
+          className="w-full border border-gray-300 rounded-lg px-4 py-2.5 pr-16
+          text-gray-800 placeholder-gray-400
+          focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary
+          transition duration-200"
+        />
         <button
-          onClick={handleGoogleSignup}
-          className="btn w-full mt-4 bg-accent"
+          type="button"
+          onClick={() => setShowPass((v) => !v)}
+          className="absolute right-4 top-1/2 -translate-y-1/2 text-sm font-medium text-primary hover:text-primary transition"
         >
-          <FcGoogle /> Continue with Google
+          {showPass ? "Hide" : "Show"}
         </button>
-
-        <p className="mt-4 text-center text-sm text-gray-600">
-          Already have an account?{" "}
-          <Link to="/login" className="text-blue-600 hover:underline">
-            Login
-          </Link>
-        </p>
       </div>
+
+      {error && (
+        <p className="text-red-500 text-sm font-medium">{error}</p>
+      )}
+
+      {/* Register Button */}
+      <button
+        type="submit"
+        className="w-full bg-primary hover:bg-orange-600
+        text-white font-semibold
+        py-2.5 rounded-lg
+        shadow-md hover:shadow-lg
+        transition duration-200"
+      >
+        Register
+      </button>
+    </form>
+
+    {/* Divider */}
+    <div className="flex items-center my-6">
+      <div className="flex-1 border-t border-gray-200"></div>
+      <span className="px-3 text-sm text-gray-400">OR</span>
+      <div className="flex-1 border-t border-gray-200"></div>
     </div>
+
+    {/* Google Button */}
+    <button
+      onClick={handleGoogleSignup}
+      className="w-full flex items-center justify-center gap-3
+      border border-gray-300 bg-white text-gray-700
+      px-4 py-2.5 rounded-lg text-sm font-medium
+      shadow-sm hover:bg-gray-50 hover:shadow-md
+      transition duration-200"
+    >
+      <FcGoogle className="text-xl" />
+      <span>Continue with Google</span>
+    </button>
+
+    <p className="mt-6 text-center text-sm text-gray-600">
+      Already have an account?{" "}
+      <Link
+        to="/login"
+        className="font-medium text-primary hover:text-orange-600 hover:underline transition"
+      >
+        Login
+      </Link>
+    </p>
+
+  </div>
+</div>
   );
 }

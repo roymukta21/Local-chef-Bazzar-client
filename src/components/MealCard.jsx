@@ -5,7 +5,7 @@ import { Link } from "react-router";
 
 const MealCard = ({ meal }) => {
   return (
-    <div className="max-w-sm w-full bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
+    <div className="max-w-sm w-full bg-white border-2 border-primary rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
       {/* Image */}
       <div className="relative h-48 sm:h-56 overflow-hidden">
         <img
@@ -51,7 +51,7 @@ const MealCard = ({ meal }) => {
         </div>
 
         {/* Location */}
-        <p className="my-1 text-sm font-semibold flex items-center gap-1">
+        <p className="my-1 text-sm text-primary font-semibold flex items-center gap-1">
           <FaLocationDot className="text-primary"/> Delivery:{" "}
           <span className="text-gray-600">{meal.deliveryArea}</span>{" "}
         </p>

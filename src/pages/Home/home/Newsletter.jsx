@@ -7,7 +7,7 @@ const Newsletter = () => {
       <div className="w-full bg-gray-900 px-4 text-center text-white py-20 flex flex-col items-center justify-center rounded-2xl mb-4">
 
         {/* Tagline */}
-        <p className="text-orange-500 font-medium tracking-wide">
+        <p className="text-primary font-medium tracking-wide">
           Stay in the Flavor Loop
         </p>
 
@@ -22,13 +22,13 @@ const Newsletter = () => {
         </p>
 
         {/* Input Box */}
-        <div className="flex items-center justify-center mt-10 border border-gray-600 focus-within:border-orange-500 text-sm rounded-full h-14 max-w-lg w-full overflow-hidden bg-gray-800/40 backdrop-blur">
+        <div className="flex items-center justify-center mt-10 border border-gray-600 focus-within:border-primary text-sm rounded-full h-14 max-w-lg w-full overflow-hidden bg-gray-800/40 backdrop-blur">
           <input
             type="email"
             className="bg-transparent outline-none px-5 h-full flex-1 text-gray-200 placeholder-gray-400"
             placeholder="Enter your email"
           />
-          <button className="bg-orange-600 hover:bg-orange-700 transition-all text-white rounded-full h-11 mr-2 px-5 md:px-10 font-medium cursor-pointer">
+          <button className="bg-primary hover:bg-orange-700 transition-all text-white rounded-full h-11 mr-2 px-5 md:px-10 font-medium cursor-pointer">
             Subscribe
           </button>
         </div>

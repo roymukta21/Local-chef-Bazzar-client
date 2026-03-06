@@ -18,7 +18,7 @@ const NotFound = () => {
             initial={{ y: -40, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}
-            className="text-6xl sm:text-8xl md:text-9xl font-extrabold text-black"
+            className="text-6xl sm:text-8xl md:text-9xl font-extrabold text-primary"
           >
             404
           </motion.h1>
@@ -32,7 +32,7 @@ const NotFound = () => {
           ></motion.div>
 
           {/* Title */}
-          <p className="text-lg sm:text-2xl md:text-3xl font-bold text-black">
+          <p className="text-lg sm:text-2xl md:text-3xl font-bold text-primary">
             Page Not Found
           </p>
 

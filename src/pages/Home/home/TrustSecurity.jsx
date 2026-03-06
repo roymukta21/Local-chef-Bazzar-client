@@ -4,14 +4,14 @@ import Reveal from "../../../components/Reveal";
 const TrustSecurity = () => {
   return (
     <Reveal>
-     <section className="bg-orange-50 p-8 rounded-3xl border hover:shadow-xl transition">
+     <section className="bg-orange-50 p-8 rounded-3xl  dark:bg-gray-900">
          {/* Heading */}
       <div className="text-center mb-14 ">
-        <h2 className="text-4xl md:text-6xl font-extrabold text-gray-800 mb-3">
+        <h2 className="text-4xl md:text-6xl font-extrabold text-secondary mb-3">
           Trust & 
-          <span className="text-orange-600"> Security</span>
+          <span className="text-primary"> Security</span>
         </h2>
-        <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+        <p className="text-lg max-w-2xl mx-auto">
           We ensure every home-cooked meal on Local Chef Bazaar is safe, verified, 
           and handled with the highest protection standards.
         </p>
@@ -51,10 +51,10 @@ const TrustSecurity = () => {
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold text-slate-800">
+              <h3 className="text-lg font-semibold text-primary">
                 Verified Home Chefs
               </h3>
-              <p className="text-slate-600 text-sm">
+              <p className="text-sm">
                 Every chef passes identity checks and kitchen quality review 
                 before joining our platform.
               </p>
@@ -87,10 +87,10 @@ const TrustSecurity = () => {
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold text-slate-800">
+              <h3 className="text-lg font-semibold text-primary">
                 Encrypted Transactions
               </h3>
-              <p className="text-slate-600 text-sm">
+              <p className="text-sm">
                 All payments are protected with industry-grade encryption 
                 ensuring your data stays private.
               </p>
@@ -117,10 +117,10 @@ const TrustSecurity = () => {
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold text-slate-800">
+              <h3 className="text-lg font-semibold text-primary">
                 Transparent Order Tracking
               </h3>
-              <p className="text-slate-600 text-sm">
+              <p className="text-sm">
                 From cooking to delivery, track every movement of your order 
                 with real-time updates.
               </p>

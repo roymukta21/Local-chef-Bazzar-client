@@ -1,8 +1,14 @@
 import { useState } from "react";
 import toast from "react-hot-toast";
-import { GoogleAuthProvider, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
+import {
+  GoogleAuthProvider,
+  sendPasswordResetEmail,
+  signInWithEmailAndPassword,
+  signInWithPopup,
+} from "firebase/auth";
 import { Link, useNavigate } from "react-router";
 import { auth } from "../firebase/firebase.config";
+import { FcGoogle } from "react-icons/fc";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -63,12 +69,14 @@ export default function Login() {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100">
+    <div className="flex justify-center items-center min-h-screen">
       <form
         onSubmit={handleLogin}
         className="bg-white shadow-md rounded-xl p-8 w-full max-w-md"
       >
-        <h2 className="text-2xl font-bold text-center mb-6 text-primary">Login</h2>
+        <h2 className="text-2xl font-bold text-center mb-6 text-primary">
+          Login
+        </h2>
 
         <div className="mb-4">
           <label className="block mb-2 text-secondary">Email</label>
@@ -110,7 +118,7 @@ export default function Login() {
         </div>
 
         <button
-          className="btn-primary bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded w-full"
+          className="btn-primary bg-primary text-white px-4 py-2 rounded w-full"
           type="submit"
         >
           Login
@@ -132,9 +140,18 @@ export default function Login() {
           <button
             type="button"
             onClick={handleGoogleLogin}
-            className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded w-full"
+            className="w-full flex items-center justify-center gap-3 
+               border border-gray-300 
+               bg-white text-gray-700 
+               px-4 py-2.5 rounded-lg 
+               text-sm font-medium 
+               shadow-sm 
+               hover:bg-gray-50 
+               hover:shadow-md 
+               transition duration-200 ease-in-out"
           >
-            Continue with Google
+            <FcGoogle className="text-xl" />
+            <span>Continue with Google</span>
           </button>
         </div>
 

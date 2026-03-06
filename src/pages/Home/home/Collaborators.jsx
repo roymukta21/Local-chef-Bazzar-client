@@ -25,7 +25,7 @@ const Collaborators = () => {
     <Reveal>
       <div className="bg-orange-50 p-8 rounded-3xl border hover:shadow-xl transition">
         {/* Heading */}
-        <h1 className="text-4xl font-bold text-orange-600 text-center">
+        <h1 className="text-4xl font-bold text-primary text-center">
           Our Partners
         </h1>
 

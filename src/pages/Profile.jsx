@@ -62,7 +62,7 @@ const Profile = () => {
               alt="User"
               className="w-28 h-28 rounded-full border-4 border-white object-cover mb-4"
             />
-            <h2 className="text-xl font-bold">{user?.displayName}</h2>
+            <h2 className="text-xl font-bold">{user?.name}</h2>
             <p className="text-sm opacity-80 wrap-break-word">{user?.email}</p>
             <span className="mt-3 px-3 py-1 bg-white text-primary rounded-full text-xs font-semibold">
               {user?.role?.toUpperCase()}

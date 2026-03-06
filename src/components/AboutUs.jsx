@@ -7,7 +7,7 @@ const AboutUs = () => {
 
       {/* Heading */}
       <div className="text-center mb-10">
-        <h1 className="text-4xl font-bold text-secondary dark:text-gray-100">
+        <h1 className="text-4xl font-bold text-primary">
           About Local Chef Bazaar
         </h1>
         <p className="mt-4 text-secondary  dark:text-gray-300 max-w-2xl mx-auto">
@@ -47,8 +47,8 @@ const AboutUs = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Card 1 */}
           <div className="p-6 rounded-lg shadow-md bg-white dark:bg-gray-800">
-            <h3 className="text-xl font-semibold mb-2">Homemade Delicacies</h3>
-            <p className="text-gray-600 dark:text-gray-300">
+            <h3 className="text-xl text-primary font-semibold mb-2">Homemade Delicacies</h3>
+            <p className="text-secondary">
               Taste authentic dishes from home chefs who pour passion into every
               recipe.
             </p>
@@ -56,8 +56,8 @@ const AboutUs = () => {
 
           {/* Card 2 */}
           <div className="p-6 rounded-lg shadow-md bg-white dark:bg-gray-800">
-            <h3 className="text-xl font-semibold mb-2">Earn as a Chef</h3>
-            <p className="text-gray-600 dark:text-gray-300">
+            <h3 className="text-xl text-primary font-semibold mb-2">Earn as a Chef</h3>
+            <p className="text-secondary">
               Home cooks can turn their cooking skills into income with zero
               setup cost.
             </p>
@@ -65,8 +65,8 @@ const AboutUs = () => {
 
           {/* Card 3 */}
           <div className="p-6 rounded-lg shadow-md bg-white dark:bg-gray-800">
-            <h3 className="text-xl font-semibold mb-2">Easy Ordering</h3>
-            <p className="text-gray-600 dark:text-gray-300">
+            <h3 className="text-xl text-primary font-semibold mb-2">Easy Ordering</h3>
+            <p className="text-secondary">
               Browse meals, order instantly, and enjoy doorstep delivery —
               simple and hassle-free.
             </p>
@@ -74,16 +74,16 @@ const AboutUs = () => {
 
           {/* Card 4 */}
           <div className="p-6 rounded-lg shadow-md bg-white dark:bg-gray-800">
-            <h3 className="text-xl font-semibold mb-2">Fresh & Quality Food</h3>
-            <p className="text-gray-600 dark:text-gray-300">
+            <h3 className="text-xl text-primary font-semibold mb-2">Fresh & Quality Food</h3>
+            <p className="text-secondary">
               Meals are prepared fresh with love, ensuring quality and hygiene.
             </p>
           </div>
 
           {/* Card 5 */}
           <div className="p-6 rounded-lg shadow-md bg-white dark:bg-gray-800">
-            <h3 className="text-xl font-semibold mb-2">Secure Payments</h3>
-            <p className="text-gray-600 dark:text-gray-300">
+            <h3 className="text-xl text-primary font-semibold mb-2">Secure Payments</h3>
+            <p className="text-secondary">
               Enjoy safe and smooth transactions through trusted payment
               gateways.
             </p>
@@ -91,8 +91,8 @@ const AboutUs = () => {
 
           {/* Card 6 */}
           <div className="p-6 rounded-lg shadow-md bg-white dark:bg-gray-800">
-            <h3 className="text-xl font-semibold mb-2">24/7 Support</h3>
-            <p className="text-gray-600 dark:text-gray-300">
+            <h3 className="text-xl text-primary font-semibold mb-2">24/7 Support</h3>
+            <p className="text-secondary">
               Our support team is always ready to help you whenever needed.
             </p>
           </div>

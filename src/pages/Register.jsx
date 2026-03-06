@@ -110,7 +110,7 @@ export default function Signup() {
     <div className="flex justify-center items-center min-h-screen  px-4 ">
   <div className="bg-white w-full max-w-md p-8 rounded-2xl shadow-xl border border-primary">
 
-    <h2 className="text-3xl font-bold text-center mb-2 text-secondary">
+    <h2 className="text-3xl font-bold text-center mb-2 text-primary">
       Create an Account
     </h2>
     <p className="text-center text-sm text-gray-500 mb-6">

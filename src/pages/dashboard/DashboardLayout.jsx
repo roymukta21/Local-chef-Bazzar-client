@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Menu,
   X,
@@ -22,14 +22,30 @@ import Swal from "sweetalert2";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import DashboardLogo from "../../components/DashboardLogo";
-
+import { signOut } from "firebase/auth";
+import { auth } from "../../firebase/firebase.config";
 
 const DashboardLayout = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+
   const { user, logOut } = useAuth();
   const { role } = useRole();
-
   const navigate = useNavigate();
+
+  /* ================= THEME ================= */
+
+  useEffect(() => {
+    const html = document.querySelector("html");
+    html.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
+  const handleTheme = (checked) => {
+    setTheme(checked ? "dark" : "light");
+  };
+
+  /* ================= MENU ================= */
 
   const userMenuItems = [
     { path: "/", icon: House, label: "Home" },
@@ -72,40 +88,45 @@ const DashboardLayout = () => {
     if (role === "Admin") return adminMenuItems;
     return userMenuItems;
   };
+
   const menuItems = getMenuItems();
-  const handleSingOut = () => {
-    Swal.fire({
-      title: "Are you sure?",
-      text: `${user.displayName}. If you're logging out, you can't access!`,
-      icon: "warning",
-      showCancelButton: true,
-      confirmButtonColor: "#f54a00",
-      cancelButtonColor: "#ff0000",
-      confirmButtonText: "Logout",
-    }).then((result) => {
-      if (result.isConfirmed) {
-        logOut()
-          .then(() => {
-            navigate("/");
-          })
-          .catch((error) => console.log(error));
-        Swal.fire({
-          title: "Logout successful",
-          text: "Thanks for staying with us!",
-          icon: "success",
-        });
-      }
-    });
-  };
+
+  /* ================= LOGOUT ================= */
+
+  const handleLogout = () => {
+  Swal.fire({
+    title: "Are you sure?",
+    text: "You will be logged out!",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#f54a00",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "Logout",
+  }).then((result) => {
+    if (result.isConfirmed) {
+      signOut(auth)
+        .then(() => {
+          navigate("/");
+
+          Swal.fire({
+            title: "Logged Out!",
+            text: "You are logged out.",
+            icon: "success",
+          });
+        })
+        .catch((err) => console.log(err));
+    }
+  });
+};
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       {/* Mobile Header */}
-      <div className="lg:hidden bg-white shadow-sm fixed top-0 left-0 right-0 z-20">
+
+      <div className="lg:hidden bg-white dark:bg-gray-800 shadow-sm fixed top-0 left-0 right-0 z-20">
         <div className="flex items-center justify-between p-4">
-          <div>
-            <DashboardLogo />
-          </div>
+          <DashboardLogo />
+
           <button onClick={() => setSidebarOpen(!sidebarOpen)} className="p-2">
             {sidebarOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -113,31 +134,36 @@ const DashboardLayout = () => {
       </div>
 
       {/* Sidebar */}
+
       <aside
-        className={`fixed top-0 left-0 z-30 h-screen w-64 bg-white shadow-lg transform transition-transform duration-300 lg:translate-x-0 ${
+        className={`fixed top-0 left-0 z-30 h-screen w-64 bg-white dark:bg-gray-800 shadow-lg transform transition-transform duration-300 lg:translate-x-0 ${
           sidebarOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
         <div className="flex flex-col h-full">
           {/* Logo */}
-          <div className="p-6 border-b">
-            <h2 className="text-2xl font-bold text-gray-800">
+
+          <div className="p-6 border-b dark:border-gray-700">
+            <h2 className="text-2xl font-bold text-gray-800 dark:text-white">
               {role === "chef"
                 ? "👨‍🍳 Chef"
                 : role === "Admin"
-                ? "🛡️ Admin"
-                : "🍽️ Food"}
+                  ? "🛡️ Admin"
+                  : "🍽️ User"}
             </h2>
+
             <p className="text-sm text-primary font-semibold mt-1">
-              {user?.displayName || "Profile"}
+              {user?.name || "Profile"}
             </p>
           </div>
 
           {/* Navigation */}
+
           <nav className="flex-1 p-4 overflow-y-auto">
             <ul className="space-y-2">
               {menuItems.map((item) => {
                 const Icon = item.icon;
+
                 return (
                   <li key={item.path}>
                     <NavLink
@@ -147,10 +173,10 @@ const DashboardLayout = () => {
                         if (window.innerWidth < 1024) setSidebarOpen(false);
                       }}
                       className={({ isActive }) =>
-                        `flex items-center gap-3 px-4 py-3 rounded-lg transition-colors w-full ${
+                        `flex items-center gap-3 px-4 py-3 rounded-lg transition-colors ${
                           isActive
-                            ? "bg-orange-50 text-primary"
-                            : "text-gray-700 hover:bg-gray-100"
+                            ? "bg-orange-50 text-primary dark:bg-gray-700"
+                            : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
                         }`
                       }
                     >
@@ -163,19 +189,48 @@ const DashboardLayout = () => {
             </ul>
           </nav>
 
-         
+          {/* Bottom Section */}
+
+          <div className="p-4 border-t dark:border-gray-700 space-y-4">
+            {/* Theme Toggle */}
+
+            <div className="flex items-center justify-between">
+              <span className="text-sm font-medium text-gray-600 dark:text-gray-300">
+                Dark Mode
+              </span>
+
+              <input
+                type="checkbox"
+                className="toggle"
+                onChange={(e) => handleTheme(e.target.checked)}
+                defaultChecked={theme === "dark"}
+              />
+            </div>
+
+            {/* Logout */}
+
+            <button
+              onClick={handleLogout}
+              className="flex items-center gap-3 w-full px-4 py-3 rounded-lg text-red-500 hover:bg-red-50 dark:hover:bg-gray-700 transition"
+            >
+              <LogOut size={20} />
+              <span className="font-medium">Logout</span>
+            </button>
+          </div>
         </div>
       </aside>
 
       {/* Main Content */}
+
       <div className="lg:ml-64 mt-8 lg:mt-0 p-8 min-h-screen">
         <Outlet />
       </div>
 
       {/* Overlay */}
+
       {sidebarOpen && (
         <div
-          className="fixed inset-0 backdrop-blur-sm bg-blend-color bg-opacity-50 z-20 lg:hidden"
+          className="fixed inset-0 backdrop-blur-sm bg-opacity-50 z-20 lg:hidden"
           onClick={() => setSidebarOpen(false)}
         />
       )}

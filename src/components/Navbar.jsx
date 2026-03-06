@@ -44,7 +44,7 @@ const Navbar = () => {
       if (result.isConfirmed) {
         signOut(auth)
           .then(() => {
-            navigate("/login");
+            navigate("/");
             Swal.fire("Logged Out!", "You are logged out.", "success");
           })
           .catch((err) => console.log(err));
@@ -95,7 +95,7 @@ const Navbar = () => {
 
           {/* LOGO */}
 
-          <Link to="/" className="flex items-center gap-2">
+          <Link to="/" className="flex items-center">
             <img src="/localChefBazaar.png" className="w-8" alt="logo" />
             <span className="text-lg font-bold text-primary">
               LocalChefBazaar
@@ -221,7 +221,7 @@ const Navbar = () => {
                   className={`px-4 py-2 rounded ${
                     isActive(item.path)
                       ? "bg-orange-50 text-primary"
-                      : "hover:bg-orange-50"
+                      : "hover:bg-slate-300"
                   }`}
                 >
                   {item.name}

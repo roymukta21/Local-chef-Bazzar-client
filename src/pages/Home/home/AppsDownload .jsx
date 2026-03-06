@@ -32,7 +32,7 @@ const AppsDownload = () => {
             >
               <img
                 className="md:w-44 w-28"
-                src="/ChatGPT Image Jan 20, 2026, 01_56_58 PM.png"
+                src="/google-play.png"
                 alt="Google Play Button"
               />
             </a>
@@ -46,7 +46,7 @@ const AppsDownload = () => {
             >
               <img
                 className="md:w-44 w-28"
-                src="/ChatGPT Image Jan 20, 2026, 02_00_32 PM.png"
+                src="/App-Store.png"
                 alt="App Store Button"
               />
             </a>

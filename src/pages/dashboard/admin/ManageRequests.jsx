@@ -63,19 +63,19 @@ const ManageRequests = () => {
     <div>
       <title>Manage Requests</title>
       <div className="mb-6 mt-12 lg:mt-0">
-        <h1 className="text-3xl font-bold text-gray-800 ">Manage Requests</h1>
+        <h1 className="text-3xl font-bold text-primary ">Manage Requests</h1>
       </div>
 
       {requests.length === 0 ? (
         <div className="bg-white rounded-lg shadow-md p-8 text-center">
-          <p className="text-gray-500 text-lg">No requests found</p>
+          <p className="text-secondary">No requests found</p>
         </div>
       ) : (
-        <div className="bg-white rounded-lg shadow overflow-hidden">
+        <div className="bg-amber-100 rounded-lg shadow overflow-hidden">
           <div className="overflow-x-auto">
             <table className="w-full">
-              <thead className="bg-gray-50">
-                <tr>
+              <thead className="text-primary">
+                <tr className="">
                   <th className="my-th">User Name</th>
                   <th className="my-th">Email</th>
                   <th className="my-th">Request Type</th>
@@ -84,11 +84,11 @@ const ManageRequests = () => {
                   <th className="my-th">Actions</th>
                 </tr>
               </thead>
-              <tbody className="bg-white divide-y divide-gray-200">
+              <tbody className="bg-orange-50 p-8 lg:px-12 rounded-3xl hover:shadow-xl transition dark:bg-gray-900">
                 {requests.map((request) => (
                   <tr key={request._id}>
                     <td className="px-6 py-4 whitespace-nowrap">
-                      <div className="text-sm font-medium text-gray-900">
+                      <div className="text-sm font-medium text-secondary">
                         {request.userName}
                       </div>
                     </td>

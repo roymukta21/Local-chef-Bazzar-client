@@ -41,7 +41,7 @@ const Meals = () => {
           <h2 className="text-4xl font-bold text-primary mb-3">
             Discover Your Next Favorite Recipe
           </h2>
-          <p className="text-gray-600">
+          <p className="text-secondary">
             Thousands of tried-and-tested recipes, from quick dinners to
             desserts.
           </p>
@@ -50,7 +50,7 @@ const Meals = () => {
         {/* Filter Section */}
         <div className="grid grid-cols-12 gap-5 items-center mb-16">
           {/* Count */}
-          <div className="col-span-4 md:col-span-3 lg:col-span-2">
+          <div className="col-span-4 md:col-span-3 sm:col-span-2">
             <h1 className="lg:font-bold text-primary lg:text-xl">
               ({total}) Available
             </h1>

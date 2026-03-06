@@ -61,17 +61,17 @@ const ManageUsers = () => {
     <div className="">
       <title>LocalChefBazaar Users Manage</title>
       <div className="mb-6 mt-12 lg:mt-0">
-        <h1 className="text-3xl font-bold text-gray-800 ">Manage Users</h1>
+        <h1 className="text-3xl font-bold text-primary ">Manage Users</h1>
       </div>
       {users.length === 0 ? (
         <div className="bg-white rounded-lg shadow-md p-8 text-center">
           <p className="text-gray-500 text-lg">No Users found</p>
         </div>
       ) : (
-        <div className="bg-orange-50 p-8 rounded-3xl border hover:shadow-xl transition">
+        <div className="bg-orange-50 p-8 lg:px-12 rounded-3xl hover:shadow-xl transition dark:bg-gray-900">
           <div className="overflow-x-auto">
             <table className="w-full">
-              <thead className="bg-gray-50">
+              <thead className="text-primary">
                 <tr>
                   <th className="my-th">User</th>
                   <th className="my-th">Email</th>
@@ -85,7 +85,7 @@ const ManageUsers = () => {
                   <tr key={user._id}>
                     <td className="px-6 py-4 whitespace-nowrap">
                       {" "}
-                      {user.displayName}
+                      {user.name}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap">
                       {user.email}
@@ -115,7 +115,7 @@ const ManageUsers = () => {
                       </span>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap">
-                      {user.role === "Admin" ? (
+                      {user.role === "admin" ? (
                         <span className="status-success">Admin</span>
                       ) : user.userStatus === "fraud" ? (
                         <span className="status-error">fraud user</span>

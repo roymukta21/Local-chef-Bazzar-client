@@ -3,10 +3,7 @@ import { motion } from "framer-motion";
 import Marquee from "react-fast-marquee";
 import { format } from "date-fns";
 import { useQuery } from "@tanstack/react-query";
-//import useAxiosSecure from "../hooks/useAxiosSecure";
-//import MealCard from "../components/MealCard";
-//import Reveal from "../components/Reveal";
-//import Loading from "../components/Loading";
+
 import {
   ChefHat,
   Clock10,
@@ -29,7 +26,6 @@ import LatestMeals from "./home/LatestMeals";
 import TrustSecurity from "./home/TrustSecurity";
 import Newsletter from "./home/Newsletter";
 import Collaborators from "./home/Collaborators";
-//import FAQ from "../home/FAQ";
 
 /* ---------------- animations ---------------- */
 const containerVariants = {

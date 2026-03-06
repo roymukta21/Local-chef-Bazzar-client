@@ -5,14 +5,14 @@
 
 /* Light theme colors */
 :root {
-  --color-primary: #f97316;
-  --color-secondary: #69625e;
+  --color-primary: #ff6900;
+  --color-secondary: #1f2937;
+}
+[data-theme="dark"] {
+  --color-primary: #fa7414;
+  --color-secondary: #e5e7eb;
 }
 
-/* Dark theme colors */
-/* [data-theme="dark"] {
-  --color-secondary: #38BDF8;
-} */
 
 
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));

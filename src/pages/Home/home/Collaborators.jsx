@@ -5,7 +5,7 @@ const Collaborators = () => {
   const partners = [
     {
       name: "Chef Anna",
-      img: "https://www.santaanasweets.com/wp-content/uploads/scallops-7404270_1280.jpg",
+      img: "https://images.unsplash.com/photo-1763301213080-3bd57e0dbe96?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       name: "Home Delights",
@@ -23,14 +23,14 @@ const Collaborators = () => {
 
   return (
     <Reveal>
-      <div className="bg-orange-50 p-8 rounded-3xl border hover:shadow-xl transition">
+      <div className="bg-orange-50 p-8 rounded-3xl hover:shadow-xl transition dark:bg-gray-900">
         {/* Heading */}
         <h1 className="text-4xl font-bold text-primary text-center">
           Our Partners
         </h1>
 
         {/* About / Description */}
-        <p className="text-center text-gray-600 mt-4 max-w-3xl mx-auto">
+        <p className="text-center text-secondary mt-4 max-w-3xl mx-auto">
           We collaborate with skilled home chefs who want to turn their passion
           into a sustainable income. As a Local Chef Bazaar partner, you get
           visibility, support, and a platform to showcase your authentic cooking.

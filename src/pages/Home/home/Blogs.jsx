@@ -31,12 +31,12 @@ const blogData = [
 const Blogs = () => {
   return (
     <Reveal>
-      <section  className="bg-orange-50 p-8 rounded-3xl border hover:shadow-xl transition">
+      <section  className="bg-orange-50 p-8 lg:px-12 rounded-3xl hover:shadow-xl transition dark:bg-gray-900">
         {/* Heading */}
         <div className="text-center mb-4">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-800 mb-4">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-primary mb-4">
             Local Chef Bazzar
-            <span className="text-primary"> Blog & Stories</span>
+            <span className="text-secondary"> Blog & Stories</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Discover cooking inspiration, tips, and stories from our talented
@@ -45,7 +45,7 @@ const Blogs = () => {
         </div>
 
         {/* Blog Cards */}
-        <div className="flex flex-wrap items-center justify-center gap-8 pt-12">
+        <div className="flex flex-wrap items-center justify-center gap-22 pt-12 ">
           {blogData.map((post) => (
             <div
               key={post.id}
@@ -63,7 +63,7 @@ const Blogs = () => {
                 {post.category}
               </p>
 
-              <h3 className="text-base text-slate-900 font-bold mt-2 leading-tight group-hover:text-orange-600 transition duration-300">
+              <h3 className="text-base text-secondary font-bold mt-2 leading-tight group-hover:text-primary transition duration-300">
                 {post.title}
               </h3>
             </div>

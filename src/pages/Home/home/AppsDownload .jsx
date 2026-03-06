@@ -4,21 +4,21 @@ import Reveal from "../../../components/Reveal";
 const AppsDownload = () => {
   return (
     <Reveal>
-      <div className="bg-orange-50 p-8 rounded-3xl border hover:shadow-xl transition">
+      <div className="bg-orange-50 p-8 rounded-3xl hover:shadow-xl transition dark:bg-gray-900">
         
         {/* Text Section */}
-        <div className="flex flex-col text-center md:text-left items-center md:items-start pt-12 md:p-10">
+        <div className="flex flex-col text-center lg:px-0.5 md:text-left items-center md:items-start pt-12 md:p-10">
            {/* Image Section */}
         <img
-          className="w-[200px]  pt-10 md:p-3"
-          src="/src/assets/Chef.jpg"
+          className="w-[200px]  pt-10 md:p-1"
+          src="/Chef.jpg"
           alt="Chef"
         />
-          <h2 className="md:text-4xl text-2xl font-semibold text-gray-900">
+          <h2 className="md:text-4xl text-2xl font-semibold text-primary">
             Get the Local Chef Bazzar App
           </h2>
 
-          <p className="text-gray-700 mt-3 md:w-3/4 w-full">
+          <p className="text-secondary mt-3 md:w-3/4 w-full">
             Order fresh groceries, cooked meals & every kitchen essential — right from your phone.
           </p>
 
@@ -32,7 +32,7 @@ const AppsDownload = () => {
             >
               <img
                 className="md:w-44 w-28"
-                src="/src/assets/ChatGPT Image Jan 20, 2026, 01_56_58 PM.png"
+                src="/ChatGPT Image Jan 20, 2026, 01_56_58 PM.png"
                 alt="Google Play Button"
               />
             </a>
@@ -46,7 +46,7 @@ const AppsDownload = () => {
             >
               <img
                 className="md:w-44 w-28"
-                src="/src/assets/ChatGPT Image Jan 20, 2026, 02_00_32 PM.png"
+                src="/ChatGPT Image Jan 20, 2026, 02_00_32 PM.png"
                 alt="App Store Button"
               />
             </a>

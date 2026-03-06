@@ -177,7 +177,7 @@ const Home = () => {
       </section>
       <TrustSecurity />
       {/* ================= TESTIMONIAL ================= */}
-      <section className="bg-orange-50 p-8 rounded-3xl border hover:shadow-xl transition">
+      <section className="bg-orange-50 p-8 lg:px-12 rounded-3xl hover:shadow-xl transition dark:bg-gray-900">
         <Reveal>
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-extrabold ">
@@ -186,7 +186,7 @@ const Home = () => {
           </div>
 
           <Marquee pauseOnHover speed={40} gradient={false}>
-            <div className="flex gap-10 px-6">
+            <div className="flex gap-10 px-4">
               {reviews.map((review) => (
                 <div
                   key={review._id}

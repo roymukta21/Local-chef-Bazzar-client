@@ -23,7 +23,7 @@ const TrustSecurity = () => {
         <div className="w-full flex justify-center">
           <img
             className="max-w-2xl w-full drop-shadow-2xl rounded-2xl"
-            src="/src/assets/image.png"
+            src="/image.png"
             alt="Security Illustration"
           />
         </div>

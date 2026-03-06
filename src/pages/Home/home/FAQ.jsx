@@ -30,19 +30,20 @@ const FAQ = () => {
 
   return (
     <Reveal>
-      <div className="bg-orange-50 p-8 rounded-3xl border hover:shadow-xl transition">
+      <div className="bg-orange-50 p-8 lg:px-12 rounded-3xl hover:shadow-xl transition dark:bg-gray-900">
+        
         <img
           className="max-w-sm w-full rounded-xl h-96 object-cover justify-items-center"
-          src="/src/assets/juicy-cheeseburger-rustic-wooden-board.jpg"
+          src="/juicy-cheeseburger-rustic-wooden-board.jpg"
           alt="Delicious Homemade Meals"
         />
 
         <div>
-          <p className="text-primary text-sm font-medium">
+          <p className="text-primary text-sm font-medium py-3">
             Frequently Asked Questions
           </p>
 
-          <h1 className="text-3xl font-semibold text-slate-800">
+          <h1 className="text-3xl font-semibold text-secondary">
             Homemade Food. Hassle-Free Experience.
           </h1>
 
@@ -58,7 +59,7 @@ const FAQ = () => {
               className="border-b border-slate-200 py-4 cursor-pointer"
             >
               <div className="flex items-center justify-between">
-                <h3 className="text-base font-medium text-slate-800">
+                <h3 className="text-base font-medium text-primary">
                   {faq.question}
                 </h3>
 
@@ -83,7 +84,7 @@ const FAQ = () => {
               </div>
 
               <p
-                className={`text-sm text-slate-500 max-w-md transition-all duration-500 ease-in-out ${
+                className={`text-sm text-secondary max-w-md transition-all duration-500 ease-in-out ${
                   openIndex === index
                     ? "opacity-100 max-h-[300px] translate-y-0 pt-4"
                     : "opacity-0 max-h-0 -translate-y-2"

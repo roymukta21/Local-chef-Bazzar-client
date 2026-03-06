@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutUs = () => {
   return (
-    <div className="mt-16 mb-20 px-4 lg:px-0">
+    <div className="mt-16 mb-20 px-8 lg:px-14">
       <title>Local Chef Bazaar | About Us</title>
 
       {/* Heading */}

@@ -6,15 +6,21 @@ import {
   Phone,
   MapPin,
 } from "lucide-react";
+import { Link } from "react-router";
 
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-300 mt-20">
-      <div className="max-w-7xl mx-auto px-6 py-14">
+      <div className="max-w-7xl mx-auto px-8 lg:px-14 py-14">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           {/* Brand */}
           <div>
-            <h2 className="text-2xl font-bold text-white">LocalChefBazaar</h2>
+            <Link to="/" className="flex items-center gap-2">
+            <img src="/localChefBazaar.png" className="w-8" alt="logo" />
+            <span className="text-lg font-bold text-primary">
+              LocalChefBazaar
+            </span>
+          </Link>
             <p className="mt-4 text-sm leading-relaxed">
               A trusted marketplace connecting local home chefs with food
               lovers. Fresh, homemade meals — delivered with care.
@@ -23,7 +29,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4">
+            <h3 className="text-lg font-semibold  mb-4 text-primary">
               Quick Links
             </h3>
             <ul className="space-y-2 text-sm">
@@ -38,7 +44,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4">Contact</h3>
+            <h3 className="text-lg font-semibold text-primary mb-4">Contact</h3>
             <ul className="space-y-3 text-sm">
               <li className="flex items-center gap-2">
                 <MapPin size={16} /> Dhaka, Bangladesh
@@ -54,7 +60,7 @@ export default function Footer() {
 
           {/* Social */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4">Follow Us</h3>
+            <h3 className="text-lg font-semibold text-primary mb-4">Follow Us</h3>
             <div className="flex gap-4">
               <a
                 href="https://www.facebook.com/"

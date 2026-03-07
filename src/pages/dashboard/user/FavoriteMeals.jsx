@@ -66,7 +66,7 @@ const FavoriteMeals = () => {
               <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
                 <div className="flex items-start gap-4">
                   <div className="flex-1">
-                    <h3 className="font-semibold text-lg mb-2">
+                    <h3 className="font-semibold text-lg mb-2 text-primary">
                       {favorite.mealName}
                     </h3>
 
@@ -81,7 +81,7 @@ const FavoriteMeals = () => {
                         "dd MMM yyyy, hh:mm a"
                       )}
                     </p>
-                    <p className="font-semibold mt-2">
+                    <p className="font-semibold mt-2 text-primary">
                       Price: ${favorite.price}
                     </p>
                   </div>

@@ -54,7 +54,7 @@ const PlatformStatistics = () => {
     <div className="p-6 space-y-8">
       <title>LocalChefBazaar::Platform Statistics</title>
       <div className="mb-6 mt-12 lg:mt-0">
-        <h1 className="text-3xl font-bold text-gray-800 ">
+        <h1 className="text-3xl font-bold text-primary">
           Platform Statistics
         </h1>
       </div>
@@ -99,7 +99,7 @@ const PlatformStatistics = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Bar Chart */}
         <div className="bg-white rounded-xl shadow p-4">
-          <h3 className="text-lg font-semibold mb-4">Payment Overview</h3>
+          <h3 className="text-lg text-primary font-semibold mb-4">Payment Overview</h3>
           <ResponsiveContainer width="100%" height={300}>
             <BarChart data={paymentData}>
               <XAxis dataKey="name" />
@@ -112,7 +112,7 @@ const PlatformStatistics = () => {
 
         {/* Pie Chart */}
         <div className="bg-white rounded-xl shadow p-4">
-          <h3 className="text-lg font-semibold mb-4">Order Status</h3>
+          <h3 className="text-lg text-primary font-semibold mb-4">Order Status</h3>
           <ResponsiveContainer width="100%" height={300}>
             <PieChart>
               <Pie

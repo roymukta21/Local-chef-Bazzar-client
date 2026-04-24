@@ -1,5 +1,7 @@
 🍲 LocalChefBazaar
 
+![LocalChefBazaar Screenshot](public/LocalChefBazaarSS.png)
+
 LocalChefBazaar is a community-focused online marketplace that connects local home chefs with food lovers who crave fresh, homemade meals. The platform empowers talented home cooks to showcase their dishes while allowing users to discover, order, and enjoy authentic food made with care — all from their neighborhood.
 
 Built with a modern MERN stack, LocalChefBazaar delivers a smooth, responsive, and engaging user experience with powerful frontend tools and a scalable backend.
@@ -102,34 +104,35 @@ React Router
 Vercel
 
 📦 Major Dependencies
-Package	Description
-tailwindcss	Utility-first CSS framework
-@tanstack/react-query	Data fetching & caching
-axios	HTTP client
-firebase	Authentication & backend services
-framer-motion	Animations
-react-hook-form	Form management
-react-router	Client-side routing
-react-rating	Rating system
-react-toastify	Toast notifications
-sweetalert2	Alert & confirmation dialogs
-swiper	Slider & carousel
-recharts	Data visualization
-lucide-react	Modern icon set
-react-icons	Popular icon libraries
+Package Description
+tailwindcss Utility-first CSS framework
+@tanstack/react-query Data fetching & caching
+axios HTTP client
+firebase Authentication & backend services
+framer-motion Animations
+react-hook-form Form management
+react-router Client-side routing
+react-rating Rating system
+react-toastify Toast notifications
+sweetalert2 Alert & confirmation dialogs
+swiper Slider & carousel
+recharts Data visualization
+lucide-react Modern icon set
+react-icons Popular icon libraries
 🛠 Installation & Setup
 
 Follow these steps to run the project locally:
 
-
-
 # Navigate to the project directory
+
 cd LocalChefBazaar
 
 # Install dependencies
+
 npm install
 
 # Start the development server
+
 npm run dev
 
 🔐 Environment Variables
